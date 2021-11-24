@@ -53,3 +53,95 @@ const checkSeatArrangement = (seat) => {
 checkSeatArrangement("22B");
 checkSeatArrangement("25E");
 checkSeatArrangement("28G");
+
+// Strings Part - 2
+
+// String Methods - 2
+
+// To change the case of the string to lower
+console.log(car1.toLowerCase());
+
+// To change the case of the string to upper
+console.log(car1.toUpperCase());
+
+// To change the case of the string to upper directly in the string
+console.log("jOhNson".toUpperCase());
+
+// First capitalization in the Word
+
+const passenger = "jOhNson";
+const passengerLower = passenger.toLowerCase();
+console.log(passengerLower);
+const passengerCorrect =
+  passengerLower[0].toUpperCase() + passengerLower.slice(1);
+console.log(passengerCorrect);
+
+// Comparing Emails
+
+const actualEmail = "hello@example.com";
+const loginEmail = " Hello@Example.Com";
+const loginLower = loginEmail.toLowerCase();
+console.log(loginLower);
+
+const trimLoginLower = loginLower.trim(); // This will trim the blank space in the string
+console.log(trimLoginLower);
+
+const trimLoginEmail = loginEmail.toLowerCase().trim();
+console.log(trimLoginEmail);
+
+// Comparing actualEmail with the trimLoginEmail
+console.log(actualEmail === trimLoginEmail); // Result - True
+
+// Replacing
+
+const priceGB = "288,97#";
+const priceUS = priceGB.replace("#", "$").replace(",", ".");
+console.log(priceUS);
+
+const sentence = "Hello Jacob, welcome to this page Jacob";
+
+// To replace only the first Jacob word in the sentence
+const sentence1 = sentence.replace("Jacob", "Martin");
+console.log(sentence1);
+
+// To replace all the Jacob word in the sentence using regular function
+const sentence2 = sentence.replace(/Jacob/g, "Martin");
+console.log(sentence2);
+
+// To replace all the Jacob word in the sentence using replaceAll Method
+const sentence3 = sentence.replaceAll("Jacob", "Maxwell");
+console.log(sentence3);
+
+// Booleans
+
+// includes method
+const car4 = "Ford Mustang";
+console.log(car4.includes("Ford")); // Result - True
+console.log(car4.includes("Mustang")); // Result - True
+console.log(car4.includes("mustang")); // Result - False (due to case sensitive)
+
+// startsWith & endsWith method
+console.log(car4.startsWith("F")); // Result - True
+console.log(car4.startsWith("Ford")); // Result - True
+console.log(car4.startsWith("f")); // Result - False (due to case sensitive)
+console.log(car4.startsWith("Audi")); // Result - False
+console.log(car4.endsWith("Mustang")); // Result - True
+console.log(car4.endsWith("g")); // Result - True
+console.log(car4.endsWith("tang")); // Result - True
+console.log(car4.endsWith("M")); // Result - False
+
+car4.startsWith("Ford") && car4.endsWith("Mustang")
+  ? console.log("This car exists")
+  : console.log("This car does not exitst");
+
+// Function to check whether a passenger can borad a train with his luggage
+
+const checkLuggage = (items) => {
+  const luggage = items.toLowerCase();
+  luggage.includes("knife") || luggage.includes("gun")
+    ? console.log("You are not allowed to board")
+    : console.log("Welcome");
+};
+
+checkLuggage("I have a knife, a book and a gun for safety");
+checkLuggage("I have a food, book and some clothes");
