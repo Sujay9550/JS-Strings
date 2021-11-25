@@ -145,3 +145,49 @@ const checkLuggage = (items) => {
 
 checkLuggage("I have a knife, a book and a gun for safety");
 checkLuggage("I have a food, book and some clothes");
+
+// Strings Part - 3
+
+// Strings Method - 3
+
+// Split Method
+
+// Here Split method will create a new array with seperated values
+console.log("a+very+nice+string".split("+")); // Result - ['a', 'very', 'nice', 'string']
+console.log("Mitchele Johnson".split(" ")); // Result - ['Mitchele', 'Johnson']
+const [splitFirstName, splitLastName] = "David Warner".split(" ");
+console.log(splitFirstName, splitLastName);
+
+// Join Method
+const joinName = ["Mr.", splitFirstName, splitLastName];
+console.log(joinName);
+
+const joinedName = joinName.join(" ");
+console.log(joinedName);
+
+// Function to Capitalize the first letters in the string using slice method
+
+const capitalName = (name) => {
+  const inputName = name.split(" ");
+  const inputUpper = [];
+
+  for (const n of inputName) {
+    inputUpper.push(n[0].toUpperCase() + n.slice(1));
+  }
+  console.log(inputUpper.join(" "));
+};
+
+capitalName("Ab de villiers");
+
+// Repeat Method
+const textrepeat = "Bad Weather.. All departures delayed.. ";
+console.log(textrepeat.repeat(5));
+
+const queueAlert = "Please come in the queue... ";
+console.log(queueAlert.repeat(5));
+
+const carsInLine = function (n) {
+  console.log(`There are ${n} cars in line `.repeat(n));
+};
+
+carsInLine(5);
